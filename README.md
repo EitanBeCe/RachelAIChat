@@ -5,9 +5,10 @@ Stack: Python (Backend), React (Frontend), ChatGPT API, Fast API, ElevenLabs API
 Commands for development
 
 cd backend
-source venv/bin/activate
+source venv/bin/activate (deactivate - to deactivate)))
 uvicorn main:app --reload (for dev)
 http://localhost:8000/
+http://localhost:8000/docs (testing endpoints FastAPI)
 uvicorn main:app (for prod)
 
 cd frontend
