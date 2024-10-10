@@ -13,3 +13,10 @@ uvicorn main:app (for prod)
 cd frontend
 yarn dev
 yarn start (for prod)
+
+Backend tasks and purposes:
+1. Save audio input
+2. Convert audio to text (OpenAI Whisper)
+3. Get Chatbot response (OpenAI ChatGPT)
+4. Add to Chat Histiory
+5. Convert Text to Speech (ElevenLabs AI)
