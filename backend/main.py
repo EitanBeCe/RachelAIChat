@@ -1,8 +1,8 @@
 # cd backend
 # source venv/bin/activate
 # uvicorn main:app --reload
-# http://localhost:8000/
 # http://localhost:8000/docs
+# http://localhost:8000/
 
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import StreamingResponse
