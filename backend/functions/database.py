@@ -45,3 +45,8 @@ def get_recent_messages():
         pass
 
     return messages
+
+
+def store_messages():
+
+    pass
