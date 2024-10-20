@@ -11,6 +11,7 @@ from decouple import config
 import openai
 
 from functions.open_requests import convert_audio_to_text, get_chat_response
+from functions.database import store_messages, reset_messages
 
 # Initiate App
 app = FastAPI()
@@ -33,9 +34,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/health")
 async def check_health():
     return {"message": "healthy"}
+
+
+# Reset messages
+@app.get("/reset")
+async def reset_conversation():
+    reset_messages()
+    return {"message": "conversation reset"}
+
 
 # Get audio
 @app.get("/post-audio-get/")
@@ -54,8 +64,11 @@ async def get_audio():
     
     # Get Chat Response
     chat_response = get_chat_response(message_decoded)
-    print(chat_response)
 
+    # Store messages
+    store_messages(message_decoded, chat_response)
+
+    print(chat_response) 
 
     return "Text from audio: " + message_decoded 
 
