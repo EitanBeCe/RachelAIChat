@@ -1,7 +1,9 @@
+import Controller from "./components/Controller.tsx";
+
 function App() {
   return (
     <>
-      <div className="text-4xl bg-blue-500">Check tailwind</div>
+      <Controller />
     </>
   );
 }
