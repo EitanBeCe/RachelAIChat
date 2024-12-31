@@ -5,13 +5,13 @@ type Props = {
 };
 
 function Title({ setMessages }: Props) {
-	const [isResetting, setIsResetting] = useState(false)
+  const [isResetting, setIsResetting] = useState(false);
 
-	// Reset the conversation
-	const resetConversation = async () => {
-		setIsResetting(true)
-		setIsResetting(false)
-	}
+  // Reset the conversation
+  const resetConversation = async () => {
+    setIsResetting(true);
+    setIsResetting(false);
+  };
 
   return <div>Title</div>;
 }
